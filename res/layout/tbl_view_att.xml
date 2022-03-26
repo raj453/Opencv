@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:src="@drawable/bg3"
+        android:scaleType="center"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:id="@+id/txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Real Time Attendance"
+            android:textSize="22sp"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"
+            android:padding="10dp"/>
+        <Button
+            android:id="@+id/attendence"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:text="Make Attendance"
+            android:textSize="15sp"
+            android:layout_below="@id/txt"
+            android:layout_margin="10dp"
+            android:background="#9D4CAF"
+            android:textColor="#fff"/>
+        <Button
+            android:id="@+id/registration"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:text="Register New Student"
+            android:layout_toRightOf="@id/attendence"
+            android:textSize="15sp"
+            android:layout_margin="10dp"
+            android:background="#4CAF50"
+            android:layout_below="@id/txt"
+            android:textColor="#fff"/>
+        <Button
+            android:id="@+id/vwstud"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/registration"
+            android:text="View Student"
+            android:textSize="15sp"
+            android:layout_margin="10dp"
+            android:background="#3F51B5"
+            android:textColor="#fff"/>
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/attendence"
+            android:layout_toRightOf="@id/vwstud"
+            android:text="Logout"
+            android:textSize="15sp"
+            android:layout_margin="10dp"
+            android:background="#2196F3"
+            android:textColor="#fff"/>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Developed By RMPP Group"
+        android:textColor="#FFFFFF"
+        android:layout_alignParentBottom="true"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:textSize="20sp" />
+</RelativeLayout>

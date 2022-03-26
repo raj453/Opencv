@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_dark">
+
+    <TextView
+        android:id="@+id/lblroll"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="Roll Number"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp" />
+    <EditText
+        android:id="@+id/txtroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/lblroll"
+        android:background="#ffffff"
+        android:padding="10dp"
+        android:inputType="number"
+        android:maxLines="1"
+        android:maxLength="3"
+        android:layout_marginTop="10dp"/>
+    <requestFocus></requestFocus>
+    <Button
+        android:id="@+id/btnsearch"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/txtroll"
+        android:background="#4CAF50"
+        android:textColor="#fff"
+        android:textSize="13sp"
+        android:visibility="gone"
+        android:text="Search"/>
+    <TextView
+        android:id="@+id/lblname"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="Student Name"
+        android:layout_below="@id/lblroll"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp" />
+    <EditText
+        android:id="@+id/txtname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtroll"
+        android:layout_toRightOf="@id/lblname"
+        android:background="#ffffff"
+        android:padding="10dp"
+        android:inputType="text"
+        android:maxLines="1"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/lblmob"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="Mobile No"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:layout_below="@id/lblname"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp" />
+    <EditText
+        android:id="@+id/txtmob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtname"
+        android:layout_toRightOf="@id/lblmob"
+        android:background="#ffffff"
+        android:padding="10dp"
+        android:inputType="phone"
+        android:maxLength="10"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:id="@+id/lblclass"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="Class Name"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:layout_below="@id/lblmob"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp" />
+    <EditText
+        android:id="@+id/txtclass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtmob"
+        android:layout_toRightOf="@id/lblroll"
+        android:background="#ffffff"
+        android:padding="10dp"
+        android:inputType="none"
+        android:textIsSelectable="true"
+        android:editable="false"
+        android:layout_marginTop="10dp"/>
+
+    <Spinner
+        android:id="@+id/studclass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/studclass_arrays"
+        android:prompt="@string/studclass_prompt"
+        android:layout_toRightOf="@id/lblclass"
+        android:layout_below="@id/txtmob"
+        android:layout_marginTop="10dp"
+        android:background="#fff"
+        android:visibility="gone"
+        android:padding="10dp"/>
+
+
+    <ImageView
+        android:id="@+id/studimg"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="35dp"
+        android:layout_below="@id/lblclass"
+        android:src="@drawable/bg"
+        android:scaleType="centerCrop" />
+
+    <Button
+        android:id="@+id/btndelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblclass"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="75dp"
+        android:layout_toRightOf="@id/studimg"
+        android:background="#9C27B0"
+        android:paddingLeft="50dp"
+        android:paddingTop="10dp"
+        android:paddingRight="50dp"
+        android:paddingBottom="10dp"
+        android:text="Delete Student"
+        android:textColor="#fff"
+        android:textSize="13sp" />
+
+    <Button
+        android:id="@+id/btnupdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/studimg"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:background="#056897"
+        android:textColor="#fff"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:textSize="13sp"
+        android:text="Updated"/>
+
+    <Button
+        android:id="@+id/btnreset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/studimg"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@id/btnupdate"
+        android:background="#2E0DA3"
+        android:textColor="#fff"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:textSize="13sp"
+        android:text="Cancel"/>
+
+</RelativeLayout>

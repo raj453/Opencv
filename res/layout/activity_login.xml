@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:id="@+id/bgimg"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/bg2"
+        android:scaleType="centerCrop"/>
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="Real Time Attendence System"
+        android:textAllCaps="true"
+        android:textSize="30sp"
+        android:padding="10dp"
+        android:textColor="#00FA0A"
+        android:textStyle="bold" />
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:src="@drawable/bg"
+        android:layout_below="@id/bgimg"
+        android:scaleType="center"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/bgimg"
+        android:padding="10dp">
+        <TextView
+            android:id="@+id/lbllog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:layout_marginTop="10dp"
+            android:textColor="#5D00FF"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/lbluser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lbllog"
+            android:text="Select Class"
+            android:textColor="#E91E63"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:textSize="24sp" />
+        <Spinner
+            android:id="@+id/tclass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/studclass_arrays"
+            android:prompt="@string/studclass_prompt"
+            android:layout_toRightOf="@id/lblsubj"
+            android:layout_below="@id/lbllog"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:background="#fff"
+            android:padding="10dp"/>
+
+        <TextView
+            android:id="@+id/lblsubj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lbluser"
+            android:text="Select Subject"
+            android:textColor="#E91E63"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:textSize="24sp" />
+        <Spinner
+            android:id="@+id/tsubj"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/subj_arrays"
+            android:prompt="@string/subj_prompt"
+            android:layout_toRightOf="@id/lblsubj"
+            android:layout_below="@id/lbluser"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:background="#fff"
+            android:padding="10dp"/>
+
+        <TextView
+            android:id="@+id/lblpass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lblsubj"
+            android:text="Password"
+            android:textColor="#E91E63"
+            android:layout_marginTop="40dp"
+            android:textStyle="bold"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/txtpass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tsubj"
+            android:layout_toRightOf="@id/lblsubj"
+            android:background="#59FFFFFF"
+            android:padding="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtpass"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:background="#056897"
+            android:textColor="#fff"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:textSize="20sp"
+            android:text="Login" />
+        <Button
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtpass"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@id/submit"
+            android:background="#F40303"
+            android:textColor="#fff"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:textSize="20sp"
+            android:text="Close" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Developed By RMPP Group"
+        android:textColor="#1658BE"
+        android:layout_alignParentBottom="true"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:textSize="20sp" />
+</RelativeLayout>
